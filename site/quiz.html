@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tela</title>
+        <link rel="stylesheet" href="./css/quiz.css">
+    </head>
+
+    <body>
+        <div class="navBar">
+            <div class="parte1">
+                <h3> Logo | </h3>
+                <h3> Nome </h3>
+            </div>
+            <div class="parte2">
+                <li>
+                    <ul><a href="cadastro.html">Cadastro</a></ul>
+                    <ul><a href="login.html">Login</a></ul>
+                    <ul><a href="index.html">Home</a></ul>
+                </li>
+            </div>
+        </div>
+
+
+        <p> Qual personagem de FRIENDS você seria de acordo com a sua personalidade? </p>
+        <div class="quiz">
+            <div class="quadro1">
+                <span> Você se considera uma pessoa mais: </span>
+                <select id="um" name="primeiro">
+                    <option value="extrovertida"> Extrovertida </option>
+                    <option value="introvertida"> Introvertida </option>
+                </select>
+                <span> Qual seria o seu fim de semana perfeito? </span>
+                <select id="dois" name="segundo">
+                    <option value="museu"> Uma tarde no museu </option>
+                    <option value="compras"> Compras no shopping </option>
+                    <option value="jogo"> Assistir a um jogo de futebol do seu time favorito </option>
+                    <option value="festa"> Ir a uma festa </option>
+                    <option value="lugar"> Conhecer um lugar exótico </option>
+                    <option value="jantar"> Um jantar romântico </option>
+                </select>
+                <span> Em uma disputa, você é a pessoa que: </span>
+                <select id="tres" name="terceiro">
+                    <option value="competitiva"> É competitiva e quer ganhar a todo custo </option>
+                    <option value="relaxada"> Está participando apenas pela diversão </option>
+                </select>
+                <span> Seu tipo de humor é: </span>
+                <select id="quatro" name="quarto">
+                    <option value="acido"> Ácido </option>
+                    <option value="bobo"> Bobo </option>
+                    <option value="sarcastico"> Sarcastico </option>
+                </select>
+            </div>
+            <div class="quadro2">
+                <span> Em uma dicussão, você tenta: </span>
+                <select id="cinco" name="quinto">
+                    <option value="entender"> Fazer a outra pessoa entender seu lado em uma conversa madura e pacifica
+                    </option>
+                    <option value="humor"> Usa humor para disfarçar seu desconforto </option>
+                    <option value="emotivo"> Fica emotivo e não sabe lidar com o confronto </option>
+                </select>
+                <span> No seu grupo de amigos, você é o amigo mais: </span>
+                <select id="seis" name="sexto">
+                    <option value="engracado"> Engraçado </option>
+                    <option value="sonhador"> Sonhador </option>
+                    <option value="responsavel"> Responsável </option>
+                    <option value="gentil"> Gentil </option>
+                    <option value="inteligente"> Inteligente </option>
+                    <option value="positivo"> Positivo </option>
+                </select>
+                <div id="exibir_resultado">
+                    <span> Você seria:</span>
+                </div>
+            </div>
+
+        </div><button onclick="resultado()"> Descubra </button>
+
+    </body>
+
+    </html>
+    <script>
+
+        function resultado() {
+            var contador = 0
+            var questao1 = um.value
+            var questao2 = dois.value
+            var questao3 = tres.value
+            var questao4 = quatro.value
+            var questao5 = cinco.value
+            var questao6 = seis.value
+
+            
+        }
+    // function resultado(){
+    //     var questao1 = um.value
+    //     var questao2 = dois.value
+    //     var questao3 = tres.value
+    //     var questao4 = quatro.value
+    //     var questao5 = cinco.value
+    //     var questao6 = seis.value
+
+    //     if (questao1 == "introvertida" && questao2 == "jantar" || questao2 == "compras" && questao3 == "competitiva" && questao4 == "acido"
+    //     && questao5 == "entender" && questao6 == "responsavel"){
+    //         exibir_resultado.innerHTML = `<b>Monica Geller</b> <img src="./img/monica_geller.jpg"  style="height: 100px;">`
+    //     } else if (questao1 == "extrovertida" && questao2 == "compras" || questao2 == "jantar" && questao3 == "competitiva"
+    //     && questao4 == "sarcastico" || questao4 == "humor" && questao5 == "emotivo" && questao6 == "positivo"){
+    //         exibir_resultado.innerHTML = `Você seria Rachel Green`
+    //     } else if (questao1 == "extrovertida" && questao2 == "festa" && questao3 == "relaxada"
+    //     && questao4 == "bobo" && questao5 == "humor" && questao6 == "gentil"){
+    //         exibir_resultado.innerHTML = `Você seria Joey Tribbiani`
+    //     } else if (questao1 == "extrovertida" && questao2 == "jogo" && questao3 == "relaxada" && questao4 == "sarcastico"
+    //     && questao5 == "humor" && questao6 == "engracado"){
+    //         exibir_resultado.innerHTML = `Você seria Chandler Bing`
+    //     }
+    // }
+    </script>

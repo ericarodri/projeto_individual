@@ -1,0 +1,79 @@
+body{
+    margin: auto;
+    font-family:Arial;
+    background-image: linear-gradient(rgb(245, 206, 245), white);
+
+
+}
+.navBar{
+    width:1338px;
+    height:20%;
+    background-color: #AACCA5;
+    display:flex;
+    padding-left: 10px;
+    justify-content:space-between;
+}
+.parte1{
+    display:flex;
+}
+.menu{
+    display:flex;
+
+}
+li{
+    list-style: none;
+    display:flex;
+    padding-right:20px;
+}
+.caixamaior{
+    margin:auto;
+    margin-top:50px;
+    display:flex;
+    justify-content:space-evenly;
+    background-color:white;
+    border-radius:20px;
+    border:none;
+    width:900px;
+}
+.caixa1, .caixa2{
+    display:flex;
+    flex-direction: column;
+    margin-top:20px;
+}
+select {
+    background-color:#FFC0CB;
+    border-radius:20px;
+    border:none;
+    height:50px;
+    width:180px;
+    text-align: center;
+    margin-top:5px;
+    margin-bottom:7px;
+}
+button{
+    border-radius:50px;
+    border:none;
+    background-color:#800080;
+    width:120px;
+    height:35px;
+    padding: 3px 3px 3px 3px;
+    font-size:15px;
+}
+button:hover{
+    cursor:pointer;
+}
+.mostrar_resultado{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    margin-top:40px;
+}
+#resultado{
+    margin-top:20px;
+    border:2px solid black;
+    border-radius:20px;
+    padding:5px 5px 5px 5px;
+}
+#imagem{
+    margin-top:10px;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela</title>
+    <link rel="stylesheet" href="./css/tela1.css">
+</head>
+
+<body>
+    <div class="navBar">
+        <div class="parte1">
+            <h3> Logo | </h3>
+            <h3> Nome </h3>
+        </div>
+        <div class="parte2">
+            <li>
+                <ul><a href="cadastro.html">Cadastro</a></ul>
+                <ul><a href="login.html">Login</a></ul>
+                <ul><a href="index.html">Home</a></ul>
+                <ul><a href="curiosidades.html"> Curiosidades </a></ul>
+            </li>
+        </div>
+    </div>
+
+    <div class="imagem_principal">
+        
+    </div>
+    <div id="nomeUser">
+    </div>
+
+    <div class="elementos">
+        <div class="caixa_quiz">
+            <div class="caixa1">
+                <span> Faça o quiz agora e descubra o nível do seu conhecimento! </span>
+                <button class="teste"><a href="conhecimento2.html"> Quiz </a></button>
+            </div>
+            <div class="caixa2">
+                <img src="./assets/imgs/friends2.webp">
+            </div>
+        </div>
+        <div class="personagens">
+            <span> Personagens </span>
+            <span> Saiba mais: </span>
+            <li>
+                <ul><a href="rachel.html"> Rachel Green</a></ul>
+                <ul><a href="monica.html"> Monica Geller</a></ul>
+                <ul><a href="ross.html"> Ross Geller</a></ul>
+                <ul><a href="chandler.html"> Chandler Bing</a></ul>
+                <ul><a href="joey.html"> Joey Tribbiani</a></ul>
+                <ul><a href="phoebe.html"> Phoebe Buffay </a></ul>
+            </li>
+        </div>
+    </div>
+
+    <div class="elementos2">
+        <div class="escolha">
+            <p> Lugares para vistar </p>
+            <select id="lugares" name="lugares1">
+                <option value="exposicao"> ↓ Exposição em NY </option>
+                <option value="tematica"> ↓  Cafeteria temática </option>
+                <option value="blabla"> ↓ blabla </option>
+            </select>
+
+            <button class="ir" onclick="ir()"> Ir </button>
+
+        </div>
+        <div class="icon">
+            <img id="pino" src="./assets/imgs/pino-de-localizacao.png" alt="pino de localização">
+        </div>
+        <div class="lugares">
+            <div class="lugar">
+                <span> Nome </span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aspernatur dolor ducimus quas enim
+                commodi ea corrupti cupiditate vero culpa ullam velit, quod beatae tenetur minima eius quibusdam fugit
+                ut!
+                <button class="saiba"> Saiba mais </button>
+            </div>
+            <div class="lugar">
+                <span> Nome </span>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum laudantium neque, quibusdam enim labore
+                distinctio quasi officia ut excepturi illo numquam odio possimus soluta repellat earum veritatis
+                mollitia quam adipisci.
+                <button class="saiba"> Saiba mais </button>
+            </div>
+            <div class="lugar">
+                <span> Nome </span>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto distinctio error, unde earum qui
+                praesentium sint, voluptatum dolorem at veritatis quis nihil officia aspernatur ad veniam. Odit deleniti
+                fuga dolorem.
+                <button class="saiba"> Saiba mais </button>
+            </div>
+        </div>
+    </div>
+
+    </body>
+</html>
+
+<script>
+var distancia = 0 
+    function ir(){
+        var lugar = lugares.value 
+        if (lugar == 'exposicao') {
+            var pixels = -420
+            distancia = pixels 
+            pino.style.marginLeft = `${distancia}px`
+        }
+        else if (lugar == 'tematica'){
+            var pixels = 420
+            distancia = pixels 
+            pino.style.marginLeft = `${distancia}px`
+        } else {
+            var pixels = 0
+            distancia = pixels 
+            pino.style.marginLeft = `${distancia}px`
+        }
+    }
+
+    nomeUser.innerHTML = "";
+    var nomeArmazenado = localStorage.getItem("nome")
+    nomeUser.innerHTML = `<p> Bem vindo(a) de volta, ${nomeArmazenado}</p>`
+</script>

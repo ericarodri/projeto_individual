@@ -1,0 +1,153 @@
+body{
+    margin: auto;
+    font-family:Arial;
+    background-image:linear-gradient(purple,white);
+    /* background-image: linear-gradient(rgb(245, 206, 245), white); */
+}
+.navBar{
+    width:1356px;
+    height:45px;
+    background-color: #AACCA5;
+    display:flex;
+    padding-left: 10px;
+    justify-content:space-between;
+
+}
+p{
+text-align: center;
+font-size:30px;
+font-weight:500;
+margin-top:50px;
+margin-bottom: 20px;
+}
+.caixa_formulario{
+    width:600px;
+    height:300px;
+    display:flex;
+    margin:auto;
+    padding-top:50px;
+}
+.caixa1{
+    background-color:#D9D9D9;
+    width:50%;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+}
+
+#linha{
+    border:1px solid black;
+    width:60%;
+
+}
+#linha, .acessar, button{
+    margin-left:10px;
+    margin-top:20px;
+}
+.btn_entrar, input, span{
+    margin-top:10px;
+}
+.acessar{
+    font-size:28px;
+
+}
+.caixa2{
+    background-color:#B38DCB;
+    width:50%; 
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+
+}
+button{
+    border-radius:50px;
+    border:none;
+    background-color:#800080;
+    width:150px;
+    height:40px;
+    padding: 3px 3px 3px 3px;
+    font-size:20px;
+}
+.btn_entrar{
+    background-color:#D9D9D9;
+    height:25px;
+    font-size:18px;
+}
+button:hover{
+    cursor:pointer;
+}
+input{
+    border-radius: 50px;
+    border:none;
+    background-color: #ffc0cb;
+    width:110px;
+    height:25px;
+}
+a{
+    text-decoration: none;
+    color: purple;
+}
+.caixa{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    background-color:#B38DCB;
+    height:420px;
+    width:350px;
+}
+.v2{
+    margin-left:38%;
+    padding-top:5px;
+}
+.cadastro{
+    color:white;
+}
+.parte1{
+    display:flex;
+}
+.menu{
+    display:flex;
+
+}
+li{
+    list-style: none;
+    display:flex;
+    padding-right:20px;
+}
+.loading-div {
+    width: 50px;
+    display: none;
+  }
+  
+  .loading-div img {
+    height: 50px;
+    width: 50px;
+  }
+  
+  #div_erros_login {
+    display: none
+  }
+  
+  .alerta_erro{
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .card_erro {
+    display: none;
+    background-color: #fff;
+    color: black;
+    width: 230px;
+    position: fixed;
+    border-radius: 4px;
+    border: #e6005a 3px solid;
+    padding: 10px;
+    margin-right: 10%;
+  }
+  
+  .card_erro #mensagem_erro{
+    font-weight: 500;
+    font-size: 20px;
+  }

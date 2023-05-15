@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curiosidades</title>
+    <link rel="stylesheet" href="./css/curiosidades.css">
+</head>
+
+<body>
+    <div class="navBar">
+        <div class="parte1">
+            <h3> Logo | </h3>
+            <h3> Nome </h3>
+        </div>
+        <div class="parte2">
+            <li class="menu">
+                <ul><a href="cadastro.html">Cadastro</a></ul>
+                <ul><a href="login.html">Login</a></ul>
+                <ul><a href="index.html">Home</a></ul>
+            </li>
+        </div>
+    </div>
+
+<p> XXXXXXXXXX </p>
+
+<div class="caixa1"> 
+    <p> Eum facere autem ex voluptatem ullam ex quos fugit hic placeat saepe est similique error eum necessitatibus quisquam aut sunt amet. Et velit voluptatem qui blanditiis eaque At consectetur voluptas sed nihil delectus.
+    </p>
+
+    <div class="imagem1">
+        <img src="./assets/imgs/friends_escada.jpg" alt="imagem personagem FRIENDS">
+      </div>
+    Procure o personagem:
+    <input id="personagem_input">
+    <button onclick="pesquisar()"> Pesquisar </button>
+    <div id="exibir"> </div>
+    <br><br>
+    Faça um ranking dos seus personagens favoritos:
+    <input id="favorito_input">
+    <button onclick="cadastrar()"> cadastrar </button>
+    <div id="mostrar"> </div>
+
+
+
+
+</div>
+<div class="curiosidades">
+<div class="box">
+	<a class="button" href="#popup1">Série</a>
+</div>
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<h2> Curiosidades sobre a série </h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			<ul>
+				<li> Rachel Green quase não foi protagonizada por Jennifer Aniston, pois estava escalada para participar de outra série na época que, no entanto, nunca foi ao ar</li>
+				<li> Ao contrário do que se passa na série, ela não foi filmada em Nova York </li>
+				<li> Friends foi gravada com uma platéia real </li>
+				<li> A participação de Bruce Wills não rende cachê para o ator, que participou devido a uma aposta com Matthew Perry, intérprete de Chandler Bing</li>
+				<li> Friends ganhou, após sua finalização, uma spin off que contava a história de Joey pós acontecimentos, "Joey", mas que recebeu severas criticas e durou apenas duas temporadas</li>
+				<li> A escultura marcante do cachorro gigante no apartamento de Joey e Chandler pertencia, na vida real, a Jennifer Aniston</li>
+				<li> Jennifer Aniston quase não aceitou participar da última temporada, alegando não ter mais o que contribuir como Rachel </li>
+				<li> Afim de reduzir custos, muitos episódios eram gravados unicamente em um cenário </li>
+		</ul>
+		</div>
+	</div>
+</div>
+<div class="box">
+	<a class="button" href="#popup2">Personagens </a>
+</div>
+<div id="popup2" class="overlay">
+	<div class="popup">
+		<h2> Curiosidades sobre os personagens </h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+        <ul>
+        <li> Ross foi escrito especificamente para David Schwimmer, e ele foi o único que não precisou fazer testes para conseguir o papel </li>
+        <li> Os planos inciais era para que houvesse um romance entre Joey e Monica, e não Chandler e Monica </li>
+        <li> Lisa Kudrow odiava tocar violão, a marca registrada da sua personagem </li>
+        <li> A gravidez de Phoebe não foi roterizada, e sim uma consequência da gravidez real da atriz e uma forma do roteiro lidar com isso</li>
+        </ul>
+		</div>
+	</div>
+</div>
+<div class="box">
+	<a class="button" href="#popup2"> Atores </a>
+</div>
+<div id="popup2" class="overlay">
+	<div class="popup">
+		<h2> Curiosidades sobre os atores: </h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+        <ul>
+        <li> Ross foi escrito especificamente para David Schwimmer, e ele foi o único que não precisou fazer testes para conseguir o papel </li>
+        <li> Os planos inciais era para que houvesse um romance entre Joey e Monica, e não Chandler e Monica </li>
+        <li> Lisa Kudrow odiava tocar violão, a marca registrada da sua personagem </li>
+        <li> A gravidez de Phoebe não foi roterizada, e sim uma consequência da gravidez real da atriz e uma forma do roteiro lidar com isso</li>
+        </ul>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+<div class="noticias">
+    <h2> Acompanhe por onde anda o elenco da sitcom: </h2>
+</div>
+<div class="caixa2">
+    <div class="card">
+        <span> Matthew Perry relata vícios e relação com os integrantes do seriado em autobiografia: "Friends, Lovers and the Big Terrible Things" </span>
+        <button class="saber"> Saiba mais </button>
+    </div>
+    <div class="card">
+        <span> Filme de Jennifer Aniston, "Mistério em Paris', protagonizado ao lado
+        de Adam Sandler, está previsto para chegar à Netflix dia 31 de março.
+        </span>
+        <button class="saber"> Saiba mais </button>
+    </div>
+    <div class="card">
+        <span> Courteney Cox retorna aos sets da saga Pânico para gravação de sexto filme, iniciada em 1996. </span>
+        <button class="saber"> Saiba mais </button>
+    </div>
+    <div class="card">
+        <span> Courteney Cox retorna aos sets da saga Pânico para gravação de sexto filme, iniciada em 1996. </span>
+        <button class="saber"> Saiba mais </button>
+    </div>
+    
+</div>
+</body>
+</html>
+<script>
+    var personagensFriends = [
+        "rachel",
+        "ross",
+        "monica",
+        "chandler",
+        "joey",
+        "phoebe"
+    ]
+
+    function pesquisar() {
+        var pesquisa = personagem_input.value
+
+        if (personagensFriends.indexOf(pesquisa) >= 0) {
+            if (pesquisa == "rachel") {
+                exibir.innerHTML = `<a href="rachel.html"> Rachel Green </a>`
+            } else if (pesquisa == "ross") {
+                exibir.innerHTML = `<a href="ross.html"> Ross Geller </a>`
+            } else if (pesquisa == "monica") {
+                exibir.innerHTML = `<a href="monica.html"> Monica Geller </a>`
+            } else if (pesquisa == "chandler") {
+                exibir.innerHTML = `<a href="chandler.html"> Chandler Bing </a>`
+            } else if (pesquisa == "joey") {
+                exibir.innerHTML = `<a href="joey.html"> Joey Tribbiani </a>`
+            } else if (pesquisa == "phoebe") {
+                exibir.innerHTML == `<a href="phoebe.html"> Phoebe Buffay </a>`
+            }
+        } else {
+            exibir.innerHTML = `Não foi possível encontrar o personagem`
+        }
+    }
+
+    var personagensCadastrados = []
+    function cadastrar() {
+        var personagem = favorito_input.value
+        personagensCadastrados.push(personagem)
+        personagem = ""
+
+        mostrar.innerHTML = `Ranking de favoritismo: ${personagensCadastrados.length} <br>`
+
+        for (var i = 0; i < personagensCadastrados.length; i++) {
+            
+            if (personagensCadastrados[0]) {
+                mostrar.innerHTML = `${i + 1} <b style="color:purple;">${personagensCadastrados}</b>`
+            } 
+            if (personagensCadastrados[personagensCadastrados.length - 1]) {
+                mostrar.innerHTML += `${i + 1}. <b style="color:red;"> ${personagensCadastrados}</b>`
+            }
+                mostrar.innerHTML += `${i + 1}. ${personagensCadastrados[i]} <br>`
+        }
+    }
+
+</script>

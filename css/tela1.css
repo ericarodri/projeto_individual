@@ -1,0 +1,181 @@
+body{
+    margin: auto;
+    font-family:Arial;
+    background-image: linear-gradient(rgb(245, 206, 245), white);
+    /* background-image: url(../assets/imgs/abertura_fundo.jpg); */
+
+}
+.navBar{
+    width:1338px;
+    height:20%;
+    background-color: #AACCA5;
+    display:flex;
+    padding-left: 10px;
+    justify-content:space-between;
+}
+.parte1{
+    display:flex;
+}
+.menu{
+    display:flex;
+
+}
+li{
+    list-style: none;
+    display:flex;
+    padding-right:20px;
+}
+
+/* .imagem_principal{
+   background: url(../img/friends1.webp);
+   width:1473px;
+   height:507px;
+}
+*/
+.elementos{
+    display:flex;
+    justify-content:space-evenly;
+    margin-top:45px;
+}
+.caixa_quiz{
+    width:700px;
+    height:250px;
+    display:flex;
+    background-color:#D9D9D9;
+    border-radius:20px;
+    
+
+}
+.caixa1{
+    background-color:#D9D9D9;
+    width:400px;
+    display:flex;
+    justify-content:center;
+    flex-direction:column;
+    align-items:center;
+    text-align: center;
+    border-radius:20px;
+
+}
+.caixa2{
+    width:600px; 
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:center;
+    border-radius:20px;
+
+}
+.caixa2 img{
+    width:100%;
+    height:100%;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px ;
+}
+
+button{
+    border-radius:50px;
+    background-color: #800080;
+    color:white;
+    border:none;
+    width:150px;
+    height:30px;
+    font-size:20px;
+    list-style: none;
+}
+
+.caixa2 button, span{
+    padding-bottom: 10px;
+}
+button:hover{
+    cursor:pointer;
+}
+.personagens{
+    background-color:#DCBCEF;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    width:20%;
+    height:50%;
+    justify-content:center;
+    border:none;
+    border-radius: 20px;
+}
+.personagens li{
+    display:flex;
+    flex-direction: column;
+    list-style: none;
+    
+   
+}
+.personagens span{
+    font-weight:600;
+    margin-top:7px;
+}
+
+.personagens a{
+    text-decoration: none;
+    color:black;
+}  
+.caixa_quiz{
+    align-self: center;
+    
+}
+.escolha {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.escolha select{
+    background-color:#FFC0CB;
+    border-radius:20px;
+    border:none;
+    height:50px;
+    width:180px;
+    text-align: center;
+}
+.lugar{
+    background-color: #AACCA5;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-evenly;
+    width:350px;
+    height:330px;
+    text-align: center;
+
+}
+.lugar button{
+    background-color:#FFC0CB;
+    color:black;
+    font-size:15px;
+}
+.lugares{
+    display:flex;
+    justify-content:space-evenly;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+.icon {
+    width: 55px;
+    height: 55px;
+    margin:auto;
+}
+
+#pino {
+    width: 100%;
+    height: 100%;
+}
+.ir{
+    margin-top:7px;
+    margin-bottom:7px;
+    font-size:15px;
+    width:100px;
+}
+#nomeUser p {
+    text-align: center;
+    font-size:28px;
+    font-weight: 600;
+    border-bottom:4px solid #DCBCEF;
+}
+

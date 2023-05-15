@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela</title>
+    <link rel="stylesheet" href="./css/conhecimento.css">
+</head>
+
+<body>
+    <div class="navBar">
+        <div class="parte1">
+            <h3> Logo | </h3>
+            <h3> Nome </h3>
+        </div>
+        <div class="parte2">
+            <li>
+                <ul><a href="cadastro.html">Cadastro</a></ul>
+                <ul><a href="login.html">Login</a></ul>
+                <ul><a href="index.html">Home</a></ul>
+            </li>
+        </div>
+    </div>
+<div class="caixamaior">
+    <div class="caixa1">
+   <span> Onde Ross e Emily se casaram? </span>
+   <select id="um" name="primeiro">
+    <option value="londres"> Londres </option>
+    <option value="bahamas"> Bahamas </option>
+    <option value="frança"> França </option>
+   </select>
+   <span> Onde se passa a série? </span>
+   <select id="dois" name="segundo">
+    <option value="lasvegas"> Las Vegas </option>
+    <option value="canada"> Canada </option>
+    <option value="novayork"> Nova York </option>
+   </select>
+   <span> Qual é o trabalho de Chandler? </span>
+   <select id="tres" name="terceiro">
+    <option value="analise">  Análise Estatística e Reconfiguração de Dados </option>
+    <option value="jornalista"> Jornalista </option>
+    <option value="engenheiro"> Engenheiro químico </option>
+   </select>
+   <span> Qual é o nome dos filhos do Ross? </span>
+   <select id="quatro" name="quarto">
+    <option value="anaarthur"> Ana e Arthur </option>
+    <option value="emmaben"> Emma e Ben </option>
+    <option value="carlyjosh"> Carly e Josh </option>
+   </select>
+   <span> Em qual temporada Chandler e Monica ficam juntos pela primeira vez?</span>
+   <select id="cinco" name="quinto">
+    <option value="5"> 5 temporada </option>
+    <option value="4"> 4 temporada </option>
+    <option value="7"> 7 temporada </option>
+   </select>
+</div>
+<div class="caixa2">
+   <span> Quantas irmãs Joey tem? </span>
+   <select id="seis" name="sexto">
+    <option value="nenhuma"> Nenhuma </option>
+    <option value="tres"> Três </option>
+    <option value="sete"> Sete </option>
+   </select>
+   <span> Quantas vezes Ross se divorciou durante o seriado? </span>
+   <select id="sete" name="setimo">
+    <option value="umD"> Uma vez </option>
+    <option value="tresD"> Três vezes </option>
+    <option value="duasD"> Duas vezes </option>
+   </select>
+   <span> Qual é o nome da música da Phoebe? </span>
+   <select id="oito" name="oitavo">
+    <option value="cat"> Smelly Cat </option>
+    <option value="annoying"> Annoying Time </option>
+    <option value="clear"> Clear Sky </option>
+   </select>
+   <span> Qual é o nome dos pais da Monica e Ross? </span>
+   <select id="nove" name="nono">
+    <option value="janicelucio"> Janice e Lucio </option>
+    <option value="jakeamanda"> Amanda e Jake </option>
+    <option value="judyjack"> Judy e Jack </option>
+   </select>
+   </div>
+</div>
+<div class="mostrar_resultado">
+    <button onclick="mostrar()"> mostrar
+    </button>
+    <div id="resultado">
+    </div>
+    <div id="imagem">
+    </div>
+</div>
+
+</body>
+</html>
+<script>
+
+var nomeArmazenado = localStorage.getItem("nome")
+
+    
+    function mostrar(){
+        resultado.innerHTML = "";
+        var qt1 = um.value
+        var qt2 = dois.value
+        var qt3 = tres.value
+        var qt4 = quatro.value
+        var qt5 = cinco.value
+        var qt6 = seis.value
+        var qt7 = sete.value
+        var qt8 = oito.value
+        var qt9 = nove.value 
+
+        contador = 1
+        var soma = 0
+
+        while (contador <= 9){
+        if (contador == 1){
+        if (qt1 == "londres"){
+               resultado.innerHTML += `${contador} <b style="color:green";> Resposta correta </b><br>`
+                contador += 1
+                soma +=1
+            } else {
+            resultado.innerHTML += `${contador} <b style="color:red";> Resposta errada </b><br>`
+            contador += 1
+        } 
+    }
+    if (contador == 2){
+        if (qt2 == "novayork"){
+               resultado.innerHTML += `${contador} <b style="color:green";> Resposta correta </b><br>`
+                contador += 1
+                soma +=1
+            } else {
+            resultado.innerHTML += `${contador}  <b style="color:red";> Resposta errada </b><br>`
+            contador += 1
+        } 
+    }
+
+    if (contador == 3){
+        if (qt3 == "analise"){
+               resultado.innerHTML += `${contador} <b style="color:green";> Resposta correta </b><br>`
+                contador += 1
+                soma +=1
+            } else {
+            resultado.innerHTML += `${contador}  <b style="color:red";> Resposta errada </b><br>`
+            contador += 1
+        } 
+    }
+
+    if (contador == 4){
+        if (qt4 == "emmaben"){
+               resultado.innerHTML += `${contador} <b style="color:green";> Resposta correta </b><br>`
+                contador += 1
+                soma +=1
+            } else {
+            resultado.innerHTML += `${contador}  <b style="color:red";> Resposta errada </b><br>`
+            contador += 1
+        } 
+    }
+
+    if (contador == 5){
+        if (qt5 == "4"){
+               resultado.innerHTML += `${contador} <b style="color:green";> Resposta correta </b><br>`
+                contador += 1
+                soma +=1
+            } else {
+            resultado.innerHTML += `${contador}  <b style="color:red";> Resposta errada </b><br>`
+            contador += 1
+        } 
+    }
+
+    if (contador == 6){
+        if (qt6 == "sete"){
+               resultado.innerHTML += `${contador} <b style="color:green";> Resposta correta </b><br>`
+                contador += 1
+                soma +=1
+            } else {
+            resultado.innerHTML += `${contador}  <b style="color:red";> Resposta errada </b><br>`
+            contador += 1
+        } 
+    }
+
+    if (contador == 7){
+        if (qt7 == "tresD"){
+               resultado.innerHTML += `${contador} <b style="color:green";> Resposta correta </b><br>`
+                contador += 1
+                soma +=1
+            } else {
+            resultado.innerHTML += `${contador}  <b style="color:red";> Resposta errada </b><br>`
+            contador += 1
+        } 
+    }
+
+    if (contador == 8){
+        if (qt8 == "cat"){
+               resultado.innerHTML += `${contador} <b style="color:green";> Resposta correta </b><br>`
+                contador += 1
+                soma +=1
+            } else {
+            resultado.innerHTML += `${contador}  <b style="color:red";> Resposta errada </b><br>`
+            contador += 1
+        } 
+    }
+
+    if (contador == 9){
+        if (qt9 == "judyjack"){
+               resultado.innerHTML += `${contador} <b style="color:green";> Resposta correta </b><br>`
+                contador += 1
+                soma +=1
+            } else {
+            resultado.innerHTML += `${contador}  <b style="color:red";> Resposta errada </b><br>`
+            contador += 1
+        } 
+    } 
+        } resultado.innerHTML += `Você acertou: ${soma} questões de ${contador - 1}<br>`
+        if (soma <= 4){
+            resultado.innerHTML += `Poxa, ${nomeArmazenado}, você não sabe muito sobre a série`
+            imagem.innerHTML = `<img src="./assets/imgs/baixo.jpg" alt="score baixo" style="height:200px";>`
+        } else if (soma > 4 && soma <= 7){
+            resultado.innerHTML += `Você sabe bastante coisa sobre a série!, ${nomeArmazenado}`
+            imagem.innerHTML = `<img src="./assets/imgs/medio.jpg" alt="score medio" style="height:200px";>`
+        } else {
+            resultado.innerHTML += `Uau, parabéns, ${nomeArmazenado}, você sabe muito sobre a série!`
+            imagem.innerHTML = `<img src="./assets/imgs/alto.jpg" alt="score alto" style="height:200px";>`
+        }
+    }
+
+</script>

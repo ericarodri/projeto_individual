@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <script src="./js/funcoes.js"></script>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <div class="navBar">
+        <div class="parte1">
+        <h3> Logo | </h3>
+        <h3> Nome </h3>
+        </div>
+        <div class="parte2">
+            <li>
+                <ul><a href="cadastro.html">Cadastro</a></ul>
+                <ul><a href="login.html">Login</a></ul>
+            </li>
+        </div>
+    </div>
+
+    <p> Se torne membro </p>
+        <div class="caixa_formulario v2">
+            <div class="alerta_erro">
+                <div class="card_erro" id="cardErro">
+                    <span id="mensagem_erro"></span>
+                </div>
+            </div>
+            <div class="caixa">
+                <span class="acessar cadastro"> Cadastro </span>
+                <span> Nome </span>
+                <input id="nome_input" type="text">
+                <span> Email </span>
+                <input id="email_input" type="email">
+                <span> Senha </span>
+                <input id="senha_input" type="password">
+                <span> Confirme a senha </span>
+                <input id="senhaConfirma_input" type="password"> 
+                <button onclick="cadastrar(), cadastrar2()" class="btn_entrar"> Cadastrar </button>
+                <span> Já possui uma conta? </span>
+                <span><a href=""> Faça login </a></span>
+            </div>
+            <div id="div_aguardar" class="loading-div">
+                <img src="./assets/circle-loading.gif" id="loading-gif">
+            </div>
+
+            <div id="div_erros_login"></div>
+        </div>
+</body>
+</html>
+<script>
+
+var nomeUsuario = []
+
+    function cadastrar2(){
+        var nomeU= nome_input.value
+        nomeUsuario.push(nomeU)
+        localStorage.setItem("nome", nomeU)
+    }
+    function cadastrar() {
+        aguardar();
+
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = nome_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var senhaConfirmaVar = senhaConfirma_input.value;
+
+        if (nomeVar == "" || emailVar == "" || senhaVar == "" || senhaConfirmaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+
+            finalizarAguardar();
+            return false;
+        }
+        else {
+            setInterval(sumirMensagem, 5000)
+        }
+
+        // if (cpfVar.length !== 14) {
+        //     cardErro.style.display = "block"
+        //     mensagem_erro.innerHTML = "O CPF precisa ter 14 caracteres";
+
+        //     finalizarAguardar();
+        //     return false;
+        // }
+        if(emailVar.indexOf("@") < 0 || emailVar.indexOf(".com") < 0){
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = `Email inválido`;
+        }
+
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                nomeServer: nomeVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+                // crie um atributo que recebe o valor recuperado aqui
+                // Agora vá para o arquivo routes/usuario.js
+            })
+        }).then(function (resposta) {
+
+            console.log("resposta: ", resposta);
+
+            if (resposta.ok) {
+                cardErro.style.display = "block";
+
+                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                setTimeout(() => {
+                    window.location = "login.html";
+                }, "2000")
+
+                limparFormulario();
+                finalizarAguardar();
+            } else {
+                throw ("Houve um erro ao tentar realizar o cadastro!");
+            }
+        }).catch(function (resposta) {
+            console.log(`#ERRO: ${resposta}`);
+            finalizarAguardar();
+        });
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+    function verificar(){
+        var VerArroba = email_input.indexOf("@")
+        var verCom = email_input.indexOf(".com")
+
+        if (verArroba < 0 || verCom < 0){
+            mensagem_erro.innerHTML = `Email inválido`
+        }
+    }
+
+</script>
