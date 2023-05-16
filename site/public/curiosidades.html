@@ -142,6 +142,7 @@
     ]
 
     function pesquisar() {
+        var pesquisa = "";
         var pesquisa = personagem_input.value
 
         if (personagensFriends.indexOf(pesquisa) >= 0) {
@@ -167,7 +168,6 @@
     function cadastrar() {
         var personagem = favorito_input.value
         personagensCadastrados.push(personagem)
-        personagem = ""
 
         mostrar.innerHTML = `Ranking de favoritismo: ${personagensCadastrados.length} <br>`
 
@@ -177,7 +177,7 @@
                 mostrar.innerHTML = `${i + 1} <b style="color:purple;">${personagensCadastrados}</b>`
             } 
             if (personagensCadastrados[personagensCadastrados.length - 1]) {
-                mostrar.innerHTML += `${i + 1}. <b style="color:red;"> ${personagensCadastrados}</b>`
+                mostrar.innerHTML = `${i + 1}. <b style="color:red;"> ${personagensCadastrados}</b>`
             }
                 mostrar.innerHTML += `${i + 1}. ${personagensCadastrados[i]} <br>`
         }
