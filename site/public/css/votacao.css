@@ -1,0 +1,74 @@
+body{
+    margin: auto;
+    font-family:Arial;
+    background-image: linear-gradient(rgb(245, 206, 245), white);
+
+}
+.navBar{
+    width:1338px;
+    height:20%;
+    background-color: #AACCA5;
+    display:flex;
+    padding-left: 10px;
+    justify-content:space-between;
+}
+.parte1{
+    display:flex;
+}
+.menu{
+    display:flex;
+
+}
+li{
+    list-style: none;
+    display:flex;
+    padding-right:20px;
+}
+.kpis{
+    display:flex;
+    margin:15px;
+    flex-direction: column;
+}
+.card{
+    background-color:#FFCFBA;
+    width:180px;
+    height:100px;
+    border-radius:20px;
+    text-align:center;
+    margin:20px;
+}
+.card p{
+    border-bottom:2px solid white;
+}
+.inicio{
+    display:flex;
+}
+input{
+    border-radius:10px;
+    border:none;
+    width:170px;
+    height:40px;
+}
+button{
+    background-color:purple;
+    color:white;
+    border-radius:50px;
+    border:none;
+    width:100px;
+    height:40px;
+    cursor:pointer;
+    margin-top:15px;
+
+}
+.um{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dois{
+    display:flex;
+    flex-direction: column;
+}
+.dois p{
+    font-size:24px;
+}
