@@ -20,31 +20,32 @@
                 <ul><a href="cadastro.html">Cadastro</a></ul>
                 <ul><a href="login.html">Login</a></ul>
                 <ul><a href="index.html">Home</a></ul>
+                <ul><a href="curiosidades.html">Curiosidades</a></ul>
             </li>
         </div>
     </div>
 
-<p> XXXXXXXXXX </p>
+
 
 <div class="caixa1"> 
+    <div class="texto">
+    <p> XXXXXXXXXX </p>
     <p> Eum facere autem ex voluptatem ullam ex quos fugit hic placeat saepe est similique error eum necessitatibus quisquam aut sunt amet. Et velit voluptatem qui blanditiis eaque At consectetur voluptas sed nihil delectus.
     </p>
-
+</div>
     <div class="imagem1">
         <img src="./assets/imgs/friends_escada.jpg" alt="imagem personagem FRIENDS">
       </div>
+</div>
     Procure o personagem:
     <input id="personagem_input">
-    <button onclick="pesquisar()"> Pesquisar </button>
+    <button class="pesquisa" onclick="pesquisar()"> Pesquisar </button>
     <div id="exibir"> </div>
     <br><br>
     Faça um ranking dos seus personagens favoritos:
     <input id="favorito_input">
-    <button onclick="cadastrar()"> cadastrar </button>
+    <button class="pesquisa" onclick="cadastrar()"> cadastrar </button>
     <div id="mostrar"> </div>
-
-
-
 
 </div>
 <div class="curiosidades">
@@ -167,7 +168,7 @@
     var personagensCadastrados = []
     function cadastrar() {
         var personagem = favorito_input.value
-        personagensCadastrados.push(personagem)
+        personagensCadastrados.push(`${personagem}<br>`)
 
         mostrar.innerHTML = `Ranking de favoritismo: ${personagensCadastrados.length} <br>`
 
@@ -176,10 +177,13 @@
             if (personagensCadastrados[0]) {
                 mostrar.innerHTML = `${i + 1} <b style="color:purple;">${personagensCadastrados}</b>`
             } 
-            if (personagensCadastrados[personagensCadastrados.length - 1]) {
+            else if (personagensCadastrados[personagensCadastrados.length - 1]) {
                 mostrar.innerHTML = `${i + 1}. <b style="color:red;"> ${personagensCadastrados}</b>`
-            }
+            } else {
+
                 mostrar.innerHTML += `${i + 1}. ${personagensCadastrados[i]} <br>`
+            }
+
         }
     }
 

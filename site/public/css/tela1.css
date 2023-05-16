@@ -26,12 +26,10 @@ li{
     padding-right:20px;
 }
 
-/* .imagem_principal{
-   background: url(../img/friends1.webp);
-   width:1473px;
-   height:507px;
+a{
+    text-decoration: none;
+    color:white;
 }
-*/
 .elementos{
     display:flex;
     justify-content:space-evenly;
@@ -143,6 +141,7 @@ button:hover{
     width:350px;
     height:330px;
     text-align: center;
+    border-radius:15px; 
 
 }
 .lugar button{

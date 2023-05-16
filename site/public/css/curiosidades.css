@@ -27,31 +27,40 @@ body{
     display:flex;
     padding-right:20px;
 }
+a{
+  text-decoration: none;
+  color:white;
+}
+input{
+  border-radius:20px;
+  border:none;
+  height:25px;
+  width:190px;
+}
+.pesquisa{
+  background-color:purple;
+  color:white;
+}
 .caixa1{
-    display:flex;
-    justify-content: space-evenly;
-    align-items:center;
-    
+  display:flex;
+  align-items:center;
+  justify-content:space-evenly;
 }
+
+
 .imagem1{
-    width:350px; 
-    margin-bottom: 15px;
-   
-}
+    width:400px; 
+    margin-top:30px;
+} 
 .imagem1 img{
     width:100%;
     border-radius: 20px;
+
 }
 p{
     text-align: center;
-    width:40%;
-}
-
-.texto p{
-    margin-left:170px;
-    width:30%;
-    margin-bottom:30px;
-}
+    width:400px;
+} 
   
   .box {
     text-decoration: none;
