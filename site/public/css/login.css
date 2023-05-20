@@ -6,7 +6,7 @@ body {
 }
 
 .navBar {
-    width: 1356px;
+    width:1356px;
     height: 45px;
     background-color: #AACCA5;
     display: flex;
@@ -16,6 +16,9 @@ body {
 }
 .parte2 a{
     color:white; 
+}
+.parte1{
+    display:flex;
 }
 p {
     text-align: center;

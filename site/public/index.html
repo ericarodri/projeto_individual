@@ -12,8 +12,8 @@
 <body>
     <div class="navBar">
         <div class="parte1">
-            <h3> Logo | </h3>
-            <h3> Nome </h3>
+        <h3> Logo | </h3>
+        <h3> Nome </h3>
         </div>
         <div class="parte2">
             <li>
@@ -21,6 +21,7 @@
                 <ul><a href="login.html">Login</a></ul>
                 <ul><a href="index.html">Home</a></ul>
                 <ul><a href="curiosidades.html"> Curiosidades </a></ul>
+                <ul><a href="conhecimento2.html"> Quiz </a></ul>
             </li>
         </div>
     </div>
@@ -29,6 +30,8 @@
         
     </div>
     <div id="nomeUser">
+    </div>
+    <div id="exibir">
     </div>
 
     <div class="elementos">
@@ -45,12 +48,12 @@
             <span> Personagens </span>
             <span> Saiba mais: </span>
             <li>
-                <ul><a href="rachel.html"> Rachel Green</a></ul>
-                <ul><a href="monica.html"> Monica Geller</a></ul>
-                <ul><a href="ross.html"> Ross Geller</a></ul>
-                <ul><a href="chandler.html"> Chandler Bing</a></ul>
-                <ul><a href="joey.html"> Joey Tribbiani</a></ul>
-                <ul><a href="phoebe.html"> Phoebe Buffay </a></ul>
+                <ul><a href="./personagens/rachel.html"> Rachel Green</a></ul>
+                <ul><a href="./personagens/monica.html"> Monica Geller</a></ul>
+                <ul><a href="./personagens/ross.html"> Ross Geller</a></ul>
+                <ul><a href="./personagens/chandler.html"> Chandler Bing</a></ul>
+                <ul><a href="./personagens/joey.html"> Joey Tribbiani</a></ul>
+                <ul><a href="./personagens/phoebe.html"> Phoebe Buffay </a></ul>
             </li>
         </div>
     </div>
@@ -94,7 +97,7 @@
             </div>
         </div>
     </div>
-
+    
     </body>
 </html>
 
@@ -121,4 +124,7 @@ var distancia = 0
     nomeUser.innerHTML = "";
     var nomeArmazenado = localStorage.getItem("nome")
     nomeUser.innerHTML = `<p> Bem vindo(a) de volta, ${nomeArmazenado}</p>`
+
+    var listaArmazenada = localStorage.getItem("ranking")
+    exibir.innerHTML = `<p> Seu personagem favorito da sitcom é: ${listaArmazenada}</p>`
 </script>

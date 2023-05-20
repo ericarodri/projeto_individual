@@ -1,25 +1,27 @@
 body{
     margin: auto;
     font-family:Arial;
-    background-image: linear-gradient(rgb(245, 206, 245), white);
-    background-size: cover;
+    background-color: rgb(241, 213, 218);
     /* height: 100vh; */
 
 
 }
 .navBar{
-    width:1338px;
+    width:1350px;
     height:20%;
     background-color: #AACCA5;
     display:flex;
-    padding-left: 10px;
     justify-content:space-between;
 }
 .parte1{
     display:flex;
+    padding-left: 10px;
+
 }
 .menu{
     display:flex;
+    padding-left: 10px;
+
 
 }
 .menu{
@@ -185,11 +187,6 @@ p{
   margin-top:15px;
   justify-content:space-evenly;
 }
-.ranking{
-  display:flex;
-  justify-content:space-evenly;
-  align-items:center;
-}
 
 #mostrar{
   margin-top:20px;
@@ -202,4 +199,14 @@ p{
 #exibir{
   border-bottom:4px solid white;
   margin-top:30px;
+}
+.elementos{
+  display:flex;
+}
+#remover_input{
+  width:60px;
+  height:30px;
+}
+input{
+  border:1px solid #AACCA5;
 }

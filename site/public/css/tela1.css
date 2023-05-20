@@ -1,22 +1,23 @@
 body{
     margin: auto;
     font-family:Arial;
-    background-image: linear-gradient(rgb(245, 206, 245), white);
+    background-color: rgb(241, 213, 218);
     /* background-image: url(../assets/imgs/abertura_fundo.jpg); */
 
 }
-.navBar{
-    width:1338px;
-    height:20%;
+.navBar {
+    width:1356px;
+    height: 45px;
     background-color: #AACCA5;
-    display:flex;
+    display: flex;
     padding-left: 10px;
-    justify-content:space-between;
+    justify-content: space-between;
+
+}
+.parte2 a{
+    color:white; 
 }
 .parte1{
-    display:flex;
-}
-.menu{
     display:flex;
 
 }
@@ -176,5 +177,14 @@ button:hover{
     font-size:28px;
     font-weight: 600;
     border-bottom:4px solid #DCBCEF;
+}
+#exibir p{
+    text-align:center;
+    font-size:17px;
+    font-weight: 600;
+    border-bottom:3px solid #DCBCEF;
+    
+
+
 }
 
