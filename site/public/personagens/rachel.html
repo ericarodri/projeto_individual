@@ -26,6 +26,7 @@
         </div>
     </div>
     <div class="caixa">
+        <div class="saibaMais_sorteio">
         <div class="personagens">
             <span> Personagens </span>
             <span> Saiba mais: </span>
@@ -38,15 +39,64 @@
                 <ul><a href="phoebe.html"> Phoebe Buffay </a></ul>
             </li>
         </div>
+        <div class="sorteio">
+            <button onclick="sortear()"> Se inspire em um look! </button>
+            <img style="width:200px" id="exibir_imagem">
+            </div>
+        </div>
         <div class="texto">
+            <span> Rachel Green </span>
             <div class="imagem">
                 <img src="../assets/imgs/sobre_rachel.jpg" alt="imagem Rachel Green">
             </div>
             <p> Rachel Green, interpretada por Jennifer Aniston, é apresentada ao público
-                quando, ao fugir de seu casamento, decide morar com sua ex melhor amiga e 
-                entender mais sobre o mundo real, distante do universo que ela conhecia de luxo,
-                dinheiro e privilégios, inicialmente trabalhando como garçonete no central perk.
-
+                quando, ao fugir de seu casamento, decide morar com sua ex melhor amiga e
+                entender mais sobre o mundo real, distante do único universo que ela conhecia de luxo,
+                dinheiro e privilégios.
             </p>
+            <p> Rachel é apresentada aos telespectadores como uma mulher mimada e ingênua que inicialmente começa
+                sua jornada trabalhando como garçonete no Central Perk, e durante a trama 
+                se desenvolve até chegar a pessoa que os fãs conhecem na fase final da sitcom, uma mulher de negócios
+                bem sucedida e resolvida consigo mesmo que encontrou seu caminho após se jogar nessa jornada de forma
+                totalmente inexperiente. Paralelamente, o drama amoroso e conflituoso de Rachel e Ross, irmão de sua melhor amiga,
+                também captou a atenção dos fãs durante os anos, que sempre torceram ativamente por esse casal, apesar de suas
+                complicações, mas que teve seu desfecho real apenas no último episódio, quando Rachel abre mão de uma oportunidade 
+                de trabalho em Paris e desce do avião para ficar com Ross.
+    
+            </p>
+            <p> Rachel Green teve grande influência no estilo das mulheres da época
+                que se inspiravam em suas roupas e senso de moda nos anos 90, e seus cortes de cabelo
+                se mantêm com extrema popularidade até hoje. A personagem teve grande impacto no cenário da moda
+                e inspirou muitas pessoas e tendências ao redor do mundo, e sua carreira é voltada justamente ao 
+                campo da moda, como ela sempre sonhou, e durante as temporada a vemos trabalhar em lugares como
+                a Fortunata Fashions e como vendedora na Bloomingdale', até chegar a Ralph Lauren, que lançou em 
+                2019 uma coleção especial inspirada em Rachel em comemoração aos 25 anos da sitcom.
+              </p>
+              <p> A principio Rachel é uma pessoa mimada e engraçada, porém 
+                totalmente centrada em si mesma e dependente da validação dos outros. 
+                Conforme ela se desenvolve, vemos uma Rachel mais auto suficiente e com maior
+                empatia pelos outros, embora continue a ser uma pessoa bastante emotiva e sensível. 
+                Rachel é extremamente comunicativa, simpática e com sonhos altos, e embora nunca tivesse tido 
+                que trabalhar duro em toda sua vida, estava disposta a fazer isso para conquistar 
+                sua dependência e conquistar seus objetivos. 
+              </p>
         </div>
     </div>
+</body>
+</html>
+<script>
+    var looks = [
+        "https://1.bp.blogspot.com/-agMISA9p4Ik/Xxoh7I1QGiI/AAAAAAAAUUk/2tLLMVN3K9c-eucC0dM4QYPEsPdi3O00wCNcBGAsYHQ/s846/vestidinho%2Be%2Bsobreposi%25C3%25A7%25C3%25A3o.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_aoDbkm0S8aqud4OXolOxSLW9RhFIsDDKixM2KggU8I2wksCLP8piSwOOa4y2AlPP14M&usqp=CAU",
+        "https://cdn.cliqueinc.com/posts/287508/asos-green-dress-287508-1590741576429-image.700x0c.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7w8a5xfT8sp4c4FGCfc7JFMWRwOL9pQIMG-b-BtMh-kVWcGWe",
+        "https://i.pinimg.com/236x/ba/91/94/ba9194e7d15a4bfda785ee29e9f8f017.jpg"
+    ]
+
+    function sortear(){
+        var look_sorteado = parseInt(Math.random() * 5)
+        console.log(look_sorteado)
+        exibir_imagem.src = looks[look_sorteado]
+    }
+
+</script>

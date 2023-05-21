@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="sortear()"> Se inspire em um look </button>
+    <img style="width:200px" id="exibir_imagem">
+</body>
+</html>
+<script>
+    var looks = [
+        "https://1.bp.blogspot.com/-agMISA9p4Ik/Xxoh7I1QGiI/AAAAAAAAUUk/2tLLMVN3K9c-eucC0dM4QYPEsPdi3O00wCNcBGAsYHQ/s846/vestidinho%2Be%2Bsobreposi%25C3%25A7%25C3%25A3o.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_aoDbkm0S8aqud4OXolOxSLW9RhFIsDDKixM2KggU8I2wksCLP8piSwOOa4y2AlPP14M&usqp=CAU",
+        "https://cdn.cliqueinc.com/posts/287508/asos-green-dress-287508-1590741576429-image.700x0c.jpg",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7w8a5xfT8sp4c4FGCfc7JFMWRwOL9pQIMG-b-BtMh-kVWcGWe",
+        "https://i.pinimg.com/236x/ba/91/94/ba9194e7d15a4bfda785ee29e9f8f017.jpg"
+    ]
+
+    function sortear(){
+        var look_sorteado = parseInt(Math.random() * 5)
+        console.log(look_sorteado)
+        exibir_imagem.src = looks[look_sorteado]
+    }
+</script>
