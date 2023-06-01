@@ -21,7 +21,7 @@
         <div class="parte2">
             <li>
                 <ul><a href="cadastro.html">Cadastro</a></ul>
-                <ul><a href="login.html">Login</a></ul>
+                <ul><a href="index.html">Login</a></ul>
             </li>
         </div>
     </div>
@@ -45,7 +45,7 @@
                 <input id="senhaConfirma_input" type="password"> 
                 <button onclick="cadastrar(), cadastrar2()" class="btn_entrar"> Cadastrar </button>
                 <span> Já possui uma conta? </span>
-                <span><a href="login.html"> Faça login </a></span>
+                <span><a href="index.html"> Faça login </a></span>
             </div>
             <div id="div_aguardar" class="loading-div">
                 <img src="./assets/circle-loading.gif" id="loading-gif">
@@ -121,7 +121,7 @@ var nomeUsuario = []
                 mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
                 setTimeout(() => {
-                    window.location = "login.html";
+                    window.location = "index.html";
                 }, "2000")
 
                 limparFormulario();

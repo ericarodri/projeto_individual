@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="./css/tela1.css">
+    <title>Login</title>
+    <script src="./js/funcoes.js"></script>
+    <link rel="stylesheet" href="./css/login.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
-
 <body>
     <div class="navBar">
         <div class="parte1">
@@ -17,117 +20,108 @@
         </div>
         <div class="parte2">
             <li>
-                <button class="sair"><a href="login.html"> SAIR </a></button>
-                <ul><a href="index.html">Home</a></ul>
-                <ul><a href="curiosidades.html"> Curiosidades </a></ul>
-                <ul><a href="dashboard.html"> Dashboard </a></ul>
-                <ul><a href="conhecimento2.html"> Quiz </a></ul>
-               
+                <ul><a href="cadastro.html">Cadastro</a></ul>
+                <ul><a href="login.html">Login</a></ul>
             </li>
         </div>
     </div>
 
-    <div class="imagem_principal">
-        
-    </div>
-    <div id="nomeUser">
-    </div>
-    <div id="exibir">
-    </div>
-
-    <div class="elementos">
-        <div class="caixa_quiz">
+    <p> Bem-vindo!</p>
+        <div class="caixa_formulario">
+            <div class="alerta_erro">
+                <div class="card_erro" id="cardErro">
+                    <span id="mensagem_erro"></span>
+                </div>
+            </div>
             <div class="caixa1">
-                <span> Faça o quiz agora e descubra o nível do seu conhecimento! </span>
-                <button class="teste"><a href="conhecimento2.html"> Quiz </a></button>
+                <span class="acessar"> Acesse seu perfil! </span>
+                <div id="linha"></div>
+                <button> Cadastrar → </button>
             </div>
             <div class="caixa2">
-                <img src="./assets/imgs/friends2.webp">
+                <span> Email </span>
+                <input id="email_input" type="email">
+                <span> Senha </span>
+                <input id="senha_input" type="password">
+                <button class="btn_entrar" onclick="entrar()"> Entrar </button>
+                <span> Ainda não tem uma conta? </span>
+                <span><a href="cadastro.html"> Crie aqui </a></span>
             </div>
-        </div>
-        <div class="personagens">
-            <span> Personagens </span>
-            <span> Saiba mais: </span>
-            <li>
-                <ul><a href="./personagens/rachel.html"> Rachel Green</a></ul>
-                <ul><a href="./personagens/monica.html"> Monica Geller</a></ul>
-                <ul><a href="./personagens/ross.html"> Ross Geller</a></ul>
-                <ul><a href="./personagens/chandler.html"> Chandler Bing</a></ul>
-                <ul><a href="./personagens/joey.html"> Joey Tribbiani</a></ul>
-                <ul><a href="./personagens/phoebe.html"> Phoebe Buffay </a></ul>
-            </li>
-        </div>
-    </div>
-
-    <div class="elementos2">
-        <div class="escolha">
-            <p> Lugares para vistar </p>
-            <select id="lugares" name="lugares1">
-                <option value="exposicao"> ↓ Exposição em NY </option>
-                <option value="tematica"> ↓  Cafeteria temática </option>
-                <option value="blabla"> ↓ blabla </option>
-            </select>
-
-            <button class="ir" onclick="ir()"> Ir </button>
-
-        </div>
-        <div class="icon">
-            <img id="pino" src="./assets/imgs/pino-de-localizacao.png" alt="pino de localização">
-        </div>
-        <div class="lugares">
-            <div class="lugar">
-                <span> Nome </span>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aspernatur dolor ducimus quas enim
-                commodi ea corrupti cupiditate vero culpa ullam velit, quod beatae tenetur minima eius quibusdam fugit
-                ut!
-                <button class="saiba"> Saiba mais </button>
+            <div id="div_aguardar" class="loading-div">
+                <img src="./assets/circle-loading.gif" id="loading-gif">
             </div>
-            <div class="lugar">
-                <span> Nome </span>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum laudantium neque, quibusdam enim labore
-                distinctio quasi officia ut excepturi illo numquam odio possimus soluta repellat earum veritatis
-                mollitia quam adipisci.
-                <button class="saiba"> Saiba mais </button>
-            </div>
-            <div class="lugar">
-                <span> Nome </span>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto distinctio error, unde earum qui
-                praesentium sint, voluptatum dolorem at veritatis quis nihil officia aspernatur ad veniam. Odit deleniti
-                fuga dolorem.
-                <button class="saiba"> Saiba mais </button>
-            </div>
+            <div id="div_erros_login"></div>
         </div>
-    </div>
-    
-    </body>
+</body>
 </html>
-
 <script>
-var distancia = 0 
-    function ir(){
-        var lugar = lugares.value 
-        if (lugar == 'exposicao') {
-            var pixels = -420
-            distancia = pixels 
-            pino.style.marginLeft = `${distancia}px`
+function entrar() {
+        aguardar();
+
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            cardErro.style.display = "block"
+            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+            finalizarAguardar();
+            return false;
         }
-        else if (lugar == 'tematica'){
-            var pixels = 420
-            distancia = pixels 
-            pino.style.marginLeft = `${distancia}px`
-        } else {
-            var pixels = 0
-            distancia = pixels 
-            pino.style.marginLeft = `${distancia}px`
+        else {
+            setInterval(sumirMensagem, 5000)
         }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+
+                    setTimeout(function () {
+                        window.location = "home.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                    finalizarAguardar(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
     }
 
-    nomeUser.innerHTML = "";
-    var nomeArmazenado = localStorage.getItem("nome")
-    nomeUser.innerHTML = `<p> Bem vindo(a) de volta, ${nomeArmazenado}</p>`
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
 
-    var listaArmazenada = localStorage.getItem("ranking")
-    exibir.innerHTML = `<p> Seu personagem favorito da sitcom é: ${listaArmazenada}</p>`
-
-    
 </script>

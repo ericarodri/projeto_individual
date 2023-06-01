@@ -17,8 +17,8 @@
         </div>
         <div class="parte2">
             <li class="menu">
-                <button class="sair"><a href="login.html"> SAIR </a></button>
-                <ul><a href="index.html">Home</a></ul>
+                <button class="sair"><a href="index.html"> SAIR </a></button>
+                <ul><a href="home.html">Home</a></ul>
                 <ul><a href="curiosidades.html">Curiosidades</a></ul>
                 <ul><a href="dashboard.html"> Dashboard </a></ul>
                 <ul><a href="conhecimento2.html"> Quiz </a></ul>
@@ -264,7 +264,7 @@
     }
 
     function salvar(){
-        localStorage.setItem("ranking", `${personagensCadastrados[0]}`)
+        sessionStorage.setItem("ranking", `${personagensCadastrados[0]}`)
     }
     
     
