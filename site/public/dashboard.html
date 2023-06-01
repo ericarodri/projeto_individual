@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/votacao.css">
+
+</head>
+
+<body>
+
+    <div class="navBar">
+        <div class="parte1">
+            <h3> Logo | </h3>
+            <h3> Nome </h3>
+        </div>
+        <div class="parte2">
+            <li>
+                <button class="sair"><a href="login.html"> SAIR </a></button>
+                <ul><a href="index.html">Home</a></ul>
+                <ul><a href="curiosidades.html"> Curiosidades </a></ul>
+                <ul><a href="dashboard.html"> Dashboard </a></ul>
+                <ul><a href="conhecimento2.html"> Quiz </a></ul>
+            </li>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1> Votação de popularidade </h1>
+        <h1> Participe </h1>
+
+        <div class="votacao">
+            <h1> Vote no seu personagem favorito: </h1>
+            <select name="votacao" id="votacao">
+                <option value="rachel"> Rachel </option>
+                <option value="ross"> Ross </option>
+                <option value="chandler"> Chandler </option>
+                <option value="monica"> Monica </option>
+                <option value="joey"> Joey </option>
+                <option value="phoebe"> Phoebe </option>
+            </select>
+            <button onclick="votar()"> Votar </button>
+        </div>
+
+        <div class="kpis">
+            <div class="card">
+                <p> Personagem mais votado: </p>
+            </div>
+            <div class="card">
+                <p> Personagem menos votado </p>
+            </div>
+            <div class="card">
+                <p> Média de votos </p>
+            </div>
+            <div class="card">
+                <p> Total de votos: </p>
+            </div>
+        </div>
+    </div>
+
+
+       
+</body>
+
+</html>

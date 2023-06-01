@@ -127,6 +127,7 @@ p{
     color:black;
     text-align: center;
   }
+
   .popup .close {
     position: absolute;
     top: 20px;
@@ -209,4 +210,20 @@ p{
 }
 input{
   border:1px solid #AACCA5;
+}
+.sair{
+  background-color:#FFC0CB;
+  border:2px solid white;
+  border-radius:15px;
+  height:40px;
+  width:50px;
+  font-size:13px;
+  margin-top:3px;
+}
+.texto{
+  display:flex;
+  justify-content:center;
+  flex-direction:column;
+  align-items:center;
+  margin-top:60px;
 }

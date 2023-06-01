@@ -82,3 +82,12 @@ a{
     text-decoration: none;
     color:white;
 }
+.sair{
+    background-color:#FFC0CB;
+    border:2px solid white;
+    border-radius:15px;
+    height:40px;
+    width:50px;
+    font-size:13px;
+    margin-top:3px;
+}

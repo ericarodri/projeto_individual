@@ -24,10 +24,34 @@ li{
     display:flex;
     padding-right:20px;
 }
+a{
+    text-decoration: none;
+    color:white;
+}
+.container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+}
+select{
+    border-radius:10px;
+    border:3px solid purple;
+    background-color: #FFCFBA;
+    height:50px;
+    width:150px;
+    text-align: center;
+    
+}
+.votacao{
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+}
 .kpis{
     display:flex;
-    margin:15px;
-    flex-direction: column;
+    justify-content:center;
 }
 .card{
     background-color:#FFCFBA;
@@ -36,6 +60,7 @@ li{
     border-radius:20px;
     text-align:center;
     margin:20px;
+    border:1px solid white;
 }
 .card p{
     border-bottom:2px solid white;
@@ -71,4 +96,13 @@ button{
 }
 .dois p{
     font-size:24px;
+}
+.sair{
+    background-color:#FFC0CB;
+    border:2px solid white;
+    border-radius:15px;
+    height:40px;
+    width:50px;
+    font-size:13px;
+    margin-top:3px;
 }

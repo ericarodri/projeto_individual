@@ -17,10 +17,11 @@
         </div>
         <div class="parte2">
             <li class="menu">
-                <ul><a href="cadastro.html">Cadastro</a></ul>
-                <ul><a href="login.html">Login</a></ul>
+                <button class="sair"><a href="login.html"> SAIR </a></button>
                 <ul><a href="index.html">Home</a></ul>
                 <ul><a href="curiosidades.html">Curiosidades</a></ul>
+                <ul><a href="dashboard.html"> Dashboard </a></ul>
+                <ul><a href="conhecimento2.html"> Quiz </a></ul>
             </li>
         </div>
     </div>
@@ -56,20 +57,20 @@
             <div id="exibir"> 
 
             </div>
+
+            <div class="caixa1">
+                <div class="texto">
+                    <h1> Curiosidades </h1>
+                    <p> Conheça mais sobre o elenco e sobre a série considerada uma das mais famosas dos últimos tempos. 
+                    </p>
+                </div>
+        
+            </div>
         </div>
     </div>
 
     </div>
-    <div class="caixa1">
-        <div class="texto">
-            <p> XXXXXXXXXX </p>
-            <p> Eum facere autem ex voluptatem ullam ex quos fugit hic placeat saepe est similique error eum
-                necessitatibus quisquam aut sunt amet. Et velit voluptatem qui blanditiis eaque At consectetur voluptas
-                sed nihil delectus.
-            </p>
-        </div>
-
-    </div>
+    
 
     <div class="curiosidades">
         <div class="box">
@@ -81,14 +82,14 @@
                 <a class="close" href="#">&times;</a>
                 <div class="content">
                     <ul>
-                        <li> Rachel Green quase não foi protagonizada por Jennifer Aniston, pois estava escalada para
-                            participar de outra série na época que, no entanto, nunca foi ao ar</li>
+                        <li> Rachel Green quase não foi protagonizada por Jennifer Aniston, que na época estava
+                            escalada para participar de outra série que nunca foi ao ar</li>
                         <li> Ao contrário do que se passa na série, ela não foi filmada em Nova York </li>
                         <li> Friends foi gravada com uma platéia real </li>
-                        <li> A participação de Bruce Wills não rende cachê para o ator, que participou devido a uma
-                            aposta com Matthew Perry, intérprete de Chandler Bing</li>
-                        <li> Friends ganhou, após sua finalização, uma spin off que contava a história de Joey pós
-                            acontecimentos, "Joey", mas que recebeu severas criticas e durou apenas duas temporadas</li>
+                        <li> A participação de Bruce Wills não rendeu cachê para o ator, que participou devido a uma
+                            aposta com Matthew Perry, ator de Chandler Bing</li>
+                        <li> Friends ganhou uma spin off que contava a história de Joey pós
+                            eventos da série, "Joey", mas que recebeu muitas criticas e durou apenas duas temporadas</li>
                         <li> A escultura marcante do cachorro gigante no apartamento de Joey e Chandler pertencia, na
                             vida real, a Jennifer Aniston</li>
                         <li> Jennifer Aniston quase não aceitou participar da última temporada, alegando não ter mais o
@@ -114,26 +115,35 @@
                         <li> Lisa Kudrow odiava tocar violão, a marca registrada da sua personagem </li>
                         <li> A gravidez de Phoebe não foi roterizada, e sim uma consequência da gravidez real da atriz e
                             uma forma do roteiro lidar com isso</li>
+                        <li> Chandler e Phoebe seriam, a principio, personagens de pouco
+                            destaque na série
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="box">
-            <a class="button" href="#popup2"> Atores </a>
+            <a class="button" href="#popup3"> Atores </a>
         </div>
-        <div id="popup2" class="overlay">
+        <div id="popup3" class="overlay">
             <div class="popup">
                 <h2> Curiosidades sobre os atores: </h2>
                 <a class="close" href="#">&times;</a>
                 <div class="content">
                     <ul>
-                        <li> Ross foi escrito especificamente para David Schwimmer, e ele foi o único que não precisou
-                            fazer testes para conseguir o papel </li>
-                        <li> Os planos inciais era para que houvesse um romance entre Joey e Monica, e não Chandler e
-                            Monica </li>
-                        <li> Lisa Kudrow odiava tocar violão, a marca registrada da sua personagem </li>
-                        <li> A gravidez de Phoebe não foi roterizada, e sim uma consequência da gravidez real da atriz e
-                            uma forma do roteiro lidar com isso</li>
+                        <li> A atriz Courtney Cox possui a mesma obssesão por limpeza que
+                            sua personagem
+                        </li>
+                        <li> Inicialmente, Courtney havia feito testes para viver a personagem Rachel,
+                            e Jennifer para Monica. </li>
+                        <li> O ator que interpreta Gunther realmente era um barista na vida real</li>
+                        <li> Matthew Perry foi indicado ao Emmy em 2002 como melhor ator coadjuvante em série de comédia </li>
+                        <li> Matthew Perry já escreveu o piloto de uma série com seu amigo Andrew Hill </li>
+                        <li> Jennifer Aniston entrou, em 2007, no ranking de mulheres mais ricas na indústria do entretenimento pela Forbes</li>
+                        <li> David Schwimmer dirigiu alguns episódios de Friends, e também a série Joey </li>
+                        <li> O primeiro papel de televisão de sucesso estrondoso de Lisa Kudrow foi como Ursula Buffay em
+                            "Mad about you", e em Friends ela interpreta a irmã gêmea de Ursula, Phoebe Buffay 
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -184,17 +194,17 @@
 
         if (personagensFriends.indexOf(linkP) >= 0) {
             if (linkP == "rachel") {
-                exibir.innerHTML = `<p><a href="rachel.html"> Rachel Green </a></p>`
+                exibir.innerHTML = `<p><a href="./personagens/rachel.html"> Rachel Green </a></p>`
             } else if (linkP == "ross") {
-                exibir.innerHTML = `<p><a href="ross.html"> Ross Geller </a></p>`
+                exibir.innerHTML = `<p><a href="./personagens/ross.html"> Ross Geller </a></p>`
             } else if (linkP == "monica") {
-                exibir.innerHTML = `<p><a href="monica.html"> Monica Geller </a></p>`
+                exibir.innerHTML = `<p><a href="./personagens/monica.html"> Monica Geller </a></p>`
             } else if (linkP == "chandler") {
-                exibir.innerHTML = `<p><a href="chandler.html"> Chandler Bing </a></p>`
+                exibir.innerHTML = `<p><a href="./personagens/chandler.html"> Chandler Bing </a></p>`
             } else if (linkP == "joey") {
-                exibir.innerHTML = `<p><a href="joey.html"> Joey Tribbiani </a></p>`
+                exibir.innerHTML = `<p><a href="./personagens/joey.html"> Joey Tribbiani </a></p>`
             } else if (linkP == "phoebe") {
-                exibir.innerHTML == `<p><a href="phoebe.html"> Phoebe Buffay </a></p>`
+                exibir.innerHTML == `<p><a href="./personagens/phoebe.html"> Phoebe Buffay </a></p>`
             }
         } else {
             exibir.innerHTML = `Não foi possível encontrar o personagem`

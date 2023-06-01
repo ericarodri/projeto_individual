@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela</title>
+    <title>Home</title>
     <link rel="stylesheet" href="./css/tela1.css">
 </head>
 
@@ -17,11 +17,12 @@
         </div>
         <div class="parte2">
             <li>
-                <ul><a href="cadastro.html">Cadastro</a></ul>
-                <ul><a href="login.html">Login</a></ul>
+                <button class="sair"><a href="login.html"> SAIR </a></button>
                 <ul><a href="index.html">Home</a></ul>
                 <ul><a href="curiosidades.html"> Curiosidades </a></ul>
+                <ul><a href="dashboard.html"> Dashboard </a></ul>
                 <ul><a href="conhecimento2.html"> Quiz </a></ul>
+               
             </li>
         </div>
     </div>
@@ -127,4 +128,6 @@ var distancia = 0
 
     var listaArmazenada = localStorage.getItem("ranking")
     exibir.innerHTML = `<p> Seu personagem favorito da sitcom é: ${listaArmazenada}</p>`
+
+    
 </script>

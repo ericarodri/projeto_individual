@@ -17,10 +17,10 @@
         </div>
         <div class="parte2">
             <li>
-                <ul><a href="cadastro.html">Cadastro</a></ul>
-                <ul><a href="login.html">Login</a></ul>
+                <button class="sair"><a href="login.html"> SAIR </a></button>
                 <ul><a href="index.html">Home</a></ul>
                 <ul><a href="curiosidades.html"> Curiosidades </a></ul>
+                <ul><a href="dashboard.html"> Dashboard </a></ul>
                 <ul><a href="conhecimento2.html"> Quiz </a></ul>
             </li>
         </div>
@@ -220,7 +220,7 @@ var nomeArmazenado = localStorage.getItem("nome")
             resultado.innerHTML += `Poxa, ${nomeArmazenado}, você não sabe muito sobre a série`
             imagem.innerHTML = `<img src="./assets/imgs/baixo.jpg" alt="score baixo" style="height:200px";>`
         } else if (soma > 4 && soma <= 7){
-            resultado.innerHTML += `Você sabe bastante coisa sobre a série!, ${nomeArmazenado}`
+            resultado.innerHTML += `Você sabe bastante coisa sobre a série, ${nomeArmazenado}!`
             imagem.innerHTML = `<img src="./assets/imgs/medio.jpg" alt="score medio" style="height:200px";>`
         } else {
             resultado.innerHTML += `Uau, parabéns, ${nomeArmazenado}, você sabe muito sobre a série!`
