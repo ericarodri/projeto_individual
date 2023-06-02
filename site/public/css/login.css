@@ -4,7 +4,15 @@ body {
     background-color: rgb(241, 213, 218);
     /* background-image: linear-gradient(rgb(245, 206, 245), white); */
 }
-
+body::-webkit-scrollbar {
+    width: 7px;
+    height:3px;
+  }
+  
+body::-webkit-scrollbar-track {
+    background: rgb(255, 120, 255);
+  }
+  
 .navBar {
     width:1356px;
     height: 45px;

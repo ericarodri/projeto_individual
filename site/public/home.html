@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    <link rel="stylesheet" href="./css/tela1.css">
+    <link rel="stylesheet" href="./css/home.css">
 </head>
 
 <body>
@@ -63,9 +63,10 @@
         <div class="escolha">
             <p> Lugares para vistar </p>
             <select id="lugares" name="lugares1">
-                <option value="exposicao"> ↓ Exposição em NY </option>
-                <option value="tematica"> ↓  Cafeteria temática </option>
-                <option value="blabla"> ↓ blabla </option>
+                <option value="trabalho"> ↓ Trabalho do Ross </option>
+                <option value="apartamento"> ↓ Apartamento friends </option>
+                <option value="teatro"> ↓ Teatro do Joey </option>
+
             </select>
 
             <button class="ir" onclick="ir()"> Ir </button>
@@ -76,24 +77,23 @@
         </div>
         <div class="lugares">
             <div class="lugar">
-                <span> Nome </span>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro aspernatur dolor ducimus quas enim
-                commodi ea corrupti cupiditate vero culpa ullam velit, quod beatae tenetur minima eius quibusdam fugit
-                ut!
+                <span> Museu Americano de História Natural </span>
+                Lolicazado em Nova York próximo ao Central Perk, esse museu é um ótimo
+                passeio cultural e serviu como referência para ser onde 
+                Ross trabalhava durante a série.
                 <button class="saiba"> Saiba mais </button>
             </div>
             <div class="lugar">
-                <span> Nome </span>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum laudantium neque, quibusdam enim labore
-                distinctio quasi officia ut excepturi illo numquam odio possimus soluta repellat earum veritatis
-                mollitia quam adipisci.
+                <span> O famoso apartamento </span>
+                O apartamento onde os personagens moravam fica localizado
+                em Greenwich Village em Nova York. Não está aberto ao público, 
+                mas sua fachada foi utilizada durante toda a temporada.
                 <button class="saiba"> Saiba mais </button>
             </div>
             <div class="lugar">
-                <span> Nome </span>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto distinctio error, unde earum qui
-                praesentium sint, voluptatum dolorem at veritatis quis nihil officia aspernatur ad veniam. Odit deleniti
-                fuga dolorem.
+                <span>  O teatro do Jey </span>
+                Joey se apresentou algumas vezes no Lucille Lortel Theatre, localizado na 121
+                Christopher Street.
                 <button class="saiba"> Saiba mais </button>
             </div>
         </div>
@@ -106,12 +106,12 @@
 var distancia = 0 
     function ir(){
         var lugar = lugares.value 
-        if (lugar == 'exposicao') {
+        if (lugar == 'trabalho') {
             var pixels = -420
             distancia = pixels 
             pino.style.marginLeft = `${distancia}px`
         }
-        else if (lugar == 'tematica'){
+        else if (lugar == 'teatro'){
             var pixels = 420
             distancia = pixels 
             pino.style.marginLeft = `${distancia}px`
