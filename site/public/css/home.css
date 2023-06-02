@@ -202,3 +202,7 @@ button:hover{
     font-size:13px;
     margin-top:3px;
 }
+.lugar span{
+    font-weight: 600;
+    border-bottom:2px solid purple;
+}

@@ -48,13 +48,13 @@
             <h1> Vote no seu personagem favorito: </h1>
             <select name="votos_personagem" id="votacao">
                 <option value=1> Rachel </option>
-                <option value=2> Ross </option>
-                <option value=3> Chandler </option>
-                <option value=4> Monica </option>
+                <option value=2> Monica </option>
+                <option value=3> Ross </option>
+                <option value=4> Chandler </option>
                 <option value=5> Joey </option>
                 <option value=6> Phoebe </option>
             </select>
-            <button onclick="votar()"> Votar </button>
+            <button onclick="votar(), finalizarVoto()"> Votar </button>
         </div>
 
         <div class="kpis">
@@ -374,6 +374,11 @@
 
     function sumirMensagem() {
         cardErro.style.display = "none"
+    }
+
+    function finalizarVoto(){
+        alert("voto registrado com sucesso")
+        location.href="dashboard.html"
     }
 
 </script>
