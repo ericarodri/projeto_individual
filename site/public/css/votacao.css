@@ -391,3 +391,9 @@ canvas {
   width: 100% !important;
   height: 100% !important;
 }
+button:hover{
+  width:200px;
+  height:80px;
+  background: linear-gradient( purple, blue);
+  transition: 500ms linear;
+}

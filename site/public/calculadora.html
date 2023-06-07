@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
+    <link rel="stylesheet" href="./css/calculadora.css">
 </head>
-<body>
-    <span> Descubra quanto tempo você levaria para assistir a série: </span>
-    <div class="caixa">
-        <span> Quantos episódios de séries comuns, de quarenta minutos, você costuma assistir semanalmente? </span>
-        <input id="quantidade_semanal" type="number">
-        <span> 
 
+<body>
+    <div class="navBar">
+        <div class="parte1">
+            <img src="./assets/imgs/logo_friends.png">
+        </div>
+        <div class="parte2">
+            <li>
+                <button class="sair"><a href="index.html"> SAIR </a></button>
+                <ul><a href="home.html">Home</a></ul>
+                <ul><a href="curiosidades.html"> Curiosidades </a></ul>
+                <ul><a href="dashboard.html"> Dashboard </a></ul>
+                <ul><a href="conhecimento2.html"> Quiz </a></ul>
+                <ul><a href="calculadora.html"> Calculadora </a></ul>
+            </li>
+        </div>
+    </div>
+
+    <div class="caixa">
+        <span> Quanto tempo você levaria para assistir a série?</span>
+        <p> Você costuma assistir muitas séries? </p>
+        <select id="habito" name="habitos">
+            <option value="sim"> Sim </option>
+            <option value="nao"> Não </option>
+        </select>
+        <p> Quantos episódios, de séries comuns, você costuma asssitir por dia? </p>
+        <input id="qnt_diaria" type="number">
+        <button onclick="calcular()"> Calcule </button>
+        <div id="exibir">
+
+        </div>
     </div>
 </body>
+
 </html>
+<script>
+    function calcular(){
+     var qnt_episodios = Number(qnt_diaria.value)
+
+     var episodios_diario = qnt_episodios * 2 
+     var qnt_dias = (236 / episodios_diario)
+     
+     exibir.innerHTML = `Você levaria aproximadamente ${qnt_dias.toFixed(0)} dias para assistir a série` 
+
+    }
+</script>
